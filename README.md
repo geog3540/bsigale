@@ -1,2 +1,2 @@
 # bsigale
-geog3540/bsigale - Sigale Brendan
+geog3540/bsigale - Brendan Sigale
