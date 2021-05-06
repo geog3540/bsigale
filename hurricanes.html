@@ -1,29 +1,68 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Evacuation Accessibility in Hurricanes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
+  	<!--
+	//////////////////////////////////////////////////////
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
+	FREE HTML5 TEMPLATE
+	DESIGNED & DEVELOPED by FreeHTML5.co
 
-  <title>Coordinated Multivariate Visualization</title>
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
 
-  <!-- Bootstrap Core CSS -->
+	//////////////////////////////////////////////////////
+	-->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Bootstrap Core CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/pcp_style.css" />
-  <link rel="stylesheet" href="css/style.css" />
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Map Style -->
+	<link rel="stylesheet" href="css/pcp_style.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
 
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
 
-
-  <!-- import JQuery and Bootstrap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  <!-- Leaflet -->
+	<!-- Leaflet -->
   <link rel="stylesheet" href="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css" />
   <script src="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
 
@@ -35,132 +74,136 @@
   <script src="js/d3.parcoords.js"></script>
   <script src="js/colorbrewer.js"></script>
 
-  <!-- import google 'Raleway' font -->
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,900" rel="stylesheet">
+	</head>
+	<body>
+	<div id="fh5co-page">
+		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
 
-</head>
-
-<body>
-
-  <nav class="navbar navbar-default">
-		<div class="container container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-				<a class="navbar-brand" href="https://geog3540.github.io/bsigale/index.html" target="_blank"><strong>BS</strong></a>
-			</div>
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="defaultNavbar1">
-				<ul class="nav navbar-nav">
-
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="https://geog3540.github.io/bsigale/about.html" target="_blank">About Me</a></li>
-							<li><a href="https://geog3540.github.io/bsigale/images/bsigale-resume.pdf" target="_blank">My Resume</a></li>
-							<li class="divider"></li>
-							<li><a href="https://geog3540.github.io/bsigale/contact.html" target="_blank">Get in Touch</a></li>
-						</ul>
-					</li>
+			<h1 id="fh5co-logo"><a href="index.html">BS</a></h1>
+			<nav id="fh5co-main-menu" role="navigation">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="images/bsigale-resume.pdf" target="_blank">Resume</a></li>
 				</ul>
+			</nav>
 
+			<div class="fh5co-footer">
+				<p><small>&copy; Brendan Sigale. All Rights Reserved.</span> <span>Designed by Brendan Sigale</span> <span>Template: Marble, from <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> </span></small></p>
+				<ul>
+					<li><a href="https://www.linkedin.com/in/brendan-sigale" target="_blank"><i class="icon-linkedin2"></i></a></li>
+          <li><a href="https://github.com/BrendanSigale"><i class="icon-github"></i></a></li>
+				</ul>
 			</div>
-			<!-- /.navbar-collapse -->
+
+		</aside>
+
+		<div id="fh5co-main">
+			<div class="fh5co-narrow-content">
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+						<img class="img-responsive" src="images/harvey_highway.jpg" alt="Hurricane Harvey's Clogged Highways">
+					</div>
+					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+						<h2 class="fh5co-heading">Hurricane Evacuation Accessibility</h2>
+						<p>Hurricanes are one of the most devastating natural distasters which can occur, causing hundreds of lives lost and billions in damages. One of the most crtical parts
+						of hurricane preparedness is save evacuation routes, as the best way to protect yourself from a hurrican is to simply not go near it. The focus of this project is to examine
+						the relationship between hurricane evacuation routes and social vulnerability, as defined and reported in the <a href="https://www.atsdr.cdc.gov/placeandhealth/svi/index.html" target="_blank"> CDC's Sovial Vulneratbility Index (SVI)</a>.
+						The SVI identifies important demographic data, such as unemployment rates and access to a vehicle, to rank census block groups in relation to one another. This was designed in partnership with the ATSDR's
+						Geospatial Research, Analysis & Services Program (GRASP) to help first responders identify where communities were hit hardest. By integrating additional data, such as projected flood depths and building damage,
+						this response can be augmented to further identify areas which need help most immediately.</p>
+
+						<p>This particular dataset was performed on a clipping of the SVI from <a href="https://www.hydroshare.org/resource/c2df2a80b9d6490788704a24854f4879/" target="_blank">Hydroshare.org</a> containing the SVI information
+						for areas affected by Hurricane Harvey. Hurricane Harvey ocurred in August 2017 and caused billions in damage to the Texas, Louisiana, and Alambama coasts, as well as significant damage in the Bahamas. This analysis was performed
+						on data from Texas, as Texas has been notorious in past hurricanes to have millions stranded in highway traffic jams during hurricane evacuations. While this is not a problem exclusive to Texas by any means, Texas is a great location
+						for this analysis as Houston, a very economically and socially diverse big city, was right in the middle of Hurricane Harvey.</P>
+					</div>
+				</div>
+				<br>
+					<div class="row row-bottom-padded-md" data-animate-effect="fadeInLeft">
+						<div style="float: left; width: 75%"
+							<p style="padding-right: 15px;">This analysis was performed on data from Hurricane Harvey, one of the most devastating hurricanes Lorem ipsum dolor sit amet,
+								consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+								laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+								sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<div data-animate-effect="fadeInLeft" style="padding-right: 150px; float: right; padding-bottom: 115px">
+							<div>
+								<div id="dropdown"></div>
+								<br><br>
+								<svg id ="legend">
+								</svg>
+							</div>
+						</div>
+				</div>
+			</div>
+			<div class="fh5co-narrow-content">
+				<div class="row row-bottom-padded-md">
+
+					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft" style="float: middle;">
+
+
+				      <!-- /.row -->
+				      <!-- Projects Row -->
+				      <div class="row row-bottom-padded-md">
+
+				        <div class="col-lg-12" style = "float: right;">
+				          <div class="col-md-12 portfolio-item">
+				            <div id="map"/>
+				          </div>
+				        </div>
+				      </div>
+				      <!-- /.row -->
+
+				      <br style="margin-top:10px;">
+
+				      <!-- Projects Row -->
+				      <div class="row row-bottom-padded-md">
+
+								<br style="margin-right:50px">
+				        <div class="col-lg-12 portfolio-item">
+
+				          <div class="col-md-12 portfolio-item" style="float: right;">
+				            <div id="pcp" class="parcoords"/>
+				          </div>
+				        </div>
+				      </div>
+
+
+
+				      <div class="row">
+				        <div class="col-xs-12">
+				          <p>Click and drag on each part of the Parallel Coordinates Plot to filter. Click to reset.</p>
+				        </div>
+				      </div>
+						</div>
+					</div>
+				</div>
+
+
+
 		</div>
-		<!-- /.container-fluid -->
-	</nav>
+	</div>
 
-  <div style="height:0px;" id="info-label" class="col-md-6 portfolio-item"></div>
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!--link to main JavaScript file-->
+	<script src="js/main_Texas.js"></script>
 
-  <!-- Page Content -->
-  <div class="container">
 
-    <!-- Page Header -->
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
 
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <div class="row panel-header">
-          <div class="col-lg-12">
-            <h1 class="page-header">Social Vulnerability and Hurricanes</h1>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-9">
-            <!-- Change the map description below-->
-            <p>Hurricanes are one of the most devastating natural distasters which can occur, causing hundreds of lives lost and billions in damages. One of the most crtical parts
-              of hurricane preparedness is save evacuation routes, as the best way to protect yourself from a hurrican is to simply not go near it. The focus of this project is to examine
-              the relationship between hurricane evacuation routes and social vulnerability, as defined and reported in the <a href="https://www.atsdr.cdc.gov/placeandhealth/svi/index.html" target="_blank"> CDC's Sovial Vulneratbility Index (SVI)</a>.
-              The SVI identifies important demographic data, such as unemployment rates and access to a vehicle, to rank census block groups in relation to one another. This was designed in partnership with the ATSDR's
-              Geospatial Research, Analysis & Services Program (GRASP) to help first responders identify where communities were hit hardest. By integrating additional data, such as projected flood depths and building damage,
-              this response can be augmented to further identify areas which need help most immediately.</p>
-
-              <p>This particular dataset was performed on a clipping of the SVI from <a href="https://www.hydroshare.org/resource/c2df2a80b9d6490788704a24854f4879/" target="_blank">Hydroshare.org</a> containing the SVI information
-              for areas affected by Hurricane Harvey. Hurricane Harvey ocurred in August 2017 and caused billions in damage to the Texas, Louisiana, and Alambama coasts, as well as significant damage in the Bahamas. This analysis was performed
-              on data from Texas, as Texas has been notorious in past hurricanes to have millions stranded in highway traffic jams during hurricane evacuations. While this is not a problem exclusive to Texas by any means, Texas is a great location
-              for this analysis as Houston, a very economically and socially diverse big city, was right in the middle of Hurricane Harvey.</P>
-
-              <p>This analysis was performed on data from Hurricane Harvey, one  </p>
-
-                  <!-- Change the map interpretation below-->
-                  <p>This map and parellel coordinates plot repres</p>
-                  </div>
-                  <div class="col-lg-2">
-                    <div class="row">
-                      <div id="dropdown"></div>
-                      <br><br>
-                      <svg id ="legend">
-                      </svg>
-                    </div>
-
-                  </div>
-                  <!-- /.row -->
-
-                  <!-- /.row -->
-                  <!-- Projects Row -->
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="col-md-12 portfolio-item">
-                        <div id="map"/>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- /.row -->
-
-                  <br style="margin-top:10px;">
-
-                  <!-- Projects Row -->
-                  <div class="row">
-                    <div class="col-lg-12 portfolio-item">
-                      <div class="col-md-12 portfolio-item">
-                        <div id="pcp" class="parcoords"/>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <p>Click and drag on each part of the Parallel Coordinates Plot to filter. Click to reset.</p>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div><!-- /.container -->
-
-            <hr>
-            <br>
-
-            <!-- Footer -->
-            <footer>
-              <div class="row">
-                <div class="col-lg-12 text-center">
-                  <p>Copyright &copy; Brendan Sigale 2021</p>
-                </div>
-              </div>
-              <!-- /.row -->
-            </footer>
-
-            <!--link to main JavaScript file-->
-            <script src="js/main_Texas.js"></script>
-
-          </body>
-
-          </html>
+	</body>
+</html>
