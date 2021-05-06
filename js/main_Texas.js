@@ -15,7 +15,7 @@ var key = "AFFGEOID";
 var dropdowntext = "Select Attribute:";
 
 //TODO: change the name of the attributes to include in the parallel coordinate plot
-var attNames = ["% Unemployed", "% Uninsured", "% No Vehicle", "% Poverty STR", "SVI Ranking"];
+var attNames = ["% Unemployed", "% Uninsured", "% No Vehicle", "% Poverty STR", "SVI Ranking", "NEAR_DIST"];
 var attLegendFormat = ".2f"
 
 // This string is appended in front of the attribute name to make age groups descriptive

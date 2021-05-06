@@ -19,7 +19,7 @@ h1.tooltip {
 }
 
 #map {
-  width: 960px;
+  width: 100%;
   height: 700px;
 }
 
@@ -57,7 +57,7 @@ svg {
 
 .regions {
   stroke: #fff;
-  stroke-width: .75px;
+  stroke-width: 0px;
   opacity: 0.8;
   fill-opacity: 0.8;
 }
@@ -80,6 +80,7 @@ svg {
 	padding: 0px;
 	display: inline-block;
 	line-height: 1em;
+  color: #ffffff
 }
 
 .infolabel b {
