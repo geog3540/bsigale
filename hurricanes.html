@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Coordinated Multivariate Visualization</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/pcp_style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+
+
+  <!-- import JQuery and Bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css" />
+  <script src="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
+
+  <!-- D3.js -->
+  <link rel="stylesheet" href="css/d3.parcoords.css">
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <!-- D3 legend to make it easier -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.13.0/d3-legend.js"></script>
+  <script src="js/d3.parcoords.js"></script>
+  <script src="js/colorbrewer.js"></script>
+
+  <!-- import google 'Raleway' font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,900" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+		<div class="container container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="https://geog3540.github.io/bsigale/index.html" target="_blank"><strong>BS</strong></a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="defaultNavbar1">
+				<ul class="nav navbar-nav">
+
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="https://geog3540.github.io/bsigale/about.html" target="_blank">About Me</a></li>
+							<li><a href="https://geog3540.github.io/bsigale/images/bsigale-resume.pdf" target="_blank">My Resume</a></li>
+							<li class="divider"></li>
+							<li><a href="https://geog3540.github.io/bsigale/contact.html" target="_blank">Get in Touch</a></li>
+						</ul>
+					</li>
+				</ul>
+
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+  <div style="height:0px;" id="info-label" class="col-md-6 portfolio-item"></div>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Header -->
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row panel-header">
+          <div class="col-lg-12">
+            <h1 class="page-header">Social Vulnerability and Hurricanes</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-9">
+            <!-- Change the map description below-->
+            <p>Hurricanes are one of the most devastating natural distasters which can occur, causing hundreds of lives lost and billions in damages. One of the most crtical parts
+              of hurricane preparedness is save evacuation routes, as the best way to protect yourself from a hurrican is to simply not go near it. The focus of this project is to examine
+              the relationship between hurricane evacuation routes and social vulnerability, as defined and reported in the <a href="https://www.atsdr.cdc.gov/placeandhealth/svi/index.html" target="_blank"> CDC's Sovial Vulneratbility Index (SVI)</a>.
+              The SVI identifies important demographic data, such as unemployment rates and access to a vehicle, to rank census block groups in relation to one another. This was designed in partnership with the ATSDR's
+              Geospatial Research, Analysis & Services Program (GRASP) to help first responders identify where communities were hit hardest. By integrating additional data, such as projected flood depths and building damage,
+              this response can be augmented to further identify areas which need help the most.</p>
+
+              <p>This analysis was performed on data from Hurricane Harvey, one  </p>
+
+                  <!-- Change the map interpretation below-->
+                  <p>This map and parellel coordinates plot repres</p>
+                  </div>
+                  <div class="col-lg-2">
+                    <div class="row">
+                      <div id="dropdown"></div>
+                      <br><br>
+                      <svg id ="legend">
+                      </svg>
+                    </div>
+
+                  </div>
+                  <!-- /.row -->
+
+                  <!-- /.row -->
+                  <!-- Projects Row -->
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="col-md-12 portfolio-item">
+                        <div id="map"/>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.row -->
+
+                  <br style="margin-top:10px;">
+
+                  <!-- Projects Row -->
+                  <div class="row">
+                    <div class="col-lg-12 portfolio-item">
+                      <div class="col-md-12 portfolio-item">
+                        <div id="pcp" class="parcoords"/>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <p>Click and drag on each part of the Parallel Coordinates Plot to filter. Click to reset.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div><!-- /.container -->
+
+            <hr>
+            <br>
+
+            <!-- Footer -->
+            <footer>
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <p>Copyright &copy; Brendan Sigale 2021</p>
+                </div>
+              </div>
+              <!-- /.row -->
+            </footer>
+
+            <!--link to main JavaScript file-->
+            <script src="js/main_Texas.js"></script>
+
+          </body>
+
+          </html>
