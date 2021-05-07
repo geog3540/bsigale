@@ -1,21 +1,21 @@
 
-var polygonJSONFile = "data/str_test.geojson";
+var polygonJSONFile = "data/first_test_str_fips.geojson";
 
 //change the center of your map in setView
-var centerLatitude = 29.824720, centerLongitude = -96.885530;
+var centerLatitude = 29.7604, centerLongitude = -95.3698;
 //Change the zoom level to fit your dataset
 // zoom level 1 shows the whole world, and 15 focuses on a neighborhood level
-var zoomLevel = 6;
+var zoomLevel = 8;
 
 var numberOfClasses = 7;
 var colors = colorbrewer.Reds;
 
 //TODO: change the name and id field of your data. These will be used to link the pcp with the map, and also display labels
-var key = "AFFGEOID";
+var key = "FIPS";
 var dropdowntext = "Select Attribute:";
 
 //TODO: change the name of the attributes to include in the parallel coordinate plot
-var attNames = ["% Unemployed", "% Uninsured", "% No Vehicle", "% Poverty STR", "SVI Ranking", "NEAR_DIST"];
+var attNames = ["EP_POV", "EP_UNEMP", "EP_MOBILE", "EP_MUNIT", "EP_NOVEH", "E_UNINSUR", "MEAN_heigh", "RPL_THEMES", "NEAR_DIST"];
 var attLegendFormat = ".2f"
 
 // This string is appended in front of the attribute name to make age groups descriptive

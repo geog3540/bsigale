@@ -19,17 +19,17 @@ h1.tooltip {
 }
 
 #map {
-  width: 100%;
+  width: auto;
   height: 700px;
 }
 
 #pcp {
-  width: 960px;
+  width: auto;
   height: 200px;
 }
 
 #legend{
-  width: 120px;
+  width: auto;
   height: 180px;
 }
 
