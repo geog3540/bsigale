@@ -114,7 +114,7 @@
 							of hurricane preparedness is save evacuation routes, as the best way to protect yourself from a hurrican is to simply not go near it. The focus of this project is to examine
 							the relationship between hurricane evacuation routes and social vulnerability, as defined and reported in the <a href="https://www.atsdr.cdc.gov/placeandhealth/svi/index.html" target="_blank"> CDC's Sovial Vulneratbility Index (SVI)</a>.
 							The SVI identifies important demographic data, such as unemployment rates and access to a vehicle, to rank census block groups in relation to one another. This was designed in partnership with the ATSDR's
-							Geospatial Research, Analysis & Services Program (GRASP) to help first responders identify where communities were hit hardest. By integrating additional data, such as projected flood depths and building damage,
+							Geospatial Research, Analysis & Services Program (GRASP) to help first responders identify where communities were hit hardest. By integrating additional data, such as historical high water marks and distance to evacuation routes,
 							this response can be augmented to further identify areas which need help most immediately.
 						</p>
 
@@ -141,7 +141,7 @@
 
 							<p style="padding-left: 3%">
 								<i><strong>Note:</strong> Because USGS High Water Marks sometimes contained sporadic measurements, especially in the downtown Houston area, some census block groups are not represented. In the future,
-									it would be nicer to have these additional values to help further understand the relationships between poverty, flood likelihood, and access to evacuation routes.</i>
+									it would be nicer to have these additional values to help further understand the relationships between poverty, flood damage, and access to evacuation routes.</i>
 							</p>
 
 							<p style="padding-right: 15px;">
@@ -152,12 +152,11 @@
 								  <li><strong>% Poverty:</strong> Estimated percent of the census block group which falls below the poverty line.</li>
 									<li><strong>% Unemployed:</strong> Estimated percent of the census block group which is unemployed.</li>
 									<li><strong>% Mobile:</strong> Estimated percent of the census block group which lives in a mobile home.</li>
-									<li><strong>% Apt:</strong> Estimated percent of the census block group which lives in an apartment (10 or more units).</li>
+									<li><strong>% Multi-Unit:</strong> Estimated percent of the census block group which lives in a multi-unit structure (10 or more units).</li>
 									<li><strong>% No Vehicle:</strong> Estimated percent of the census block group which does not over a vehicle.</li>
-									<li><strong>% Uninsured:</strong> Estimated percent of the census block group which is uninsured.</li>
-									<li><strong>Mean Height:</strong> Average USGS High Water Mark height in the cenus block group.</li>
+									<li><strong>Mean Water Height:</strong> Average USGS High Water Mark height in the cenus block group.</li>
 									<li><strong>SVI Percentile:</strong> Percentile ranking on the SVI. Closer to 1 indicates a highly vulnerable community.</li>
-									<li><strong>Distance: Euclidean</strong> not following streets) distance in meters to the nearst evacuation route on-ramp.</li>
+									<li><strong>Closest On-Ramp (m):</strong> Euclidean (not following streets) distance in meters to the nearst evacuation route on-ramp.</li>
 								</ul>
 
 								The map below allows zooming and panning. Change the data the map is displaying using the dropdown on the right. If an area is grey, the value is either 0 or missing. Any census block group you hover over will have its statistics displayed in the parallel coordinates plot below. In addition, you can click and drag over different on the parallel coordinates plot to highlight census block groups with statistics fitting into those selected ranges. Click outside the range to reset the view.
@@ -184,7 +183,7 @@
 			        </div>
 			      </div>
 
-						<div data-animate-effect="fadeInLeft" style="float: right;">
+						<div data-animate-effect="fadeInLeft" style="float: right; width: 200px;">
 							<div>
 								<div id="dropdown"></div>
 								<br><br>
